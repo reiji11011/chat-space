@@ -56,3 +56,16 @@ Things you may want to cover:
 -has_many :members
 -has_manny :users, through: :members
 -has_many :messages
+
+
+## messagesテーブル
+
+|column|Type|Options|
+|body|text|null: false|
+|image|string||
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+
+### Association
+-belongs_to :group
+-belongs_to :user
