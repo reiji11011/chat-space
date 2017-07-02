@@ -41,7 +41,7 @@ Things you may want to cover:
 |column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|email|string|null: false, add_index unique: true|
+|email|string|null: false|
 
 ### Association
 -has_many :members
@@ -51,7 +51,7 @@ Things you may want to cover:
 ## groupsテーブル
 |column|Type|Options|
 |------|----|-------|
-|detail|string|null: false|
+|name|string|null: false|
 
 ### Association
 -has_many :members
