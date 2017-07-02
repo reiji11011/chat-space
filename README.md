@@ -45,3 +45,14 @@ Things you may want to cover:
 ### Association
 -has_many :members
 -has_many :groups, through: :members
+
+
+## groupsテーブル
+|column|Type|Options|
+|------|----|-------|
+|detail|string|null: false|
+
+### Association
+-has_many :members
+-has_manny :users, through: :members
+-has_many :messages
