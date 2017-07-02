@@ -35,6 +35,7 @@ Things you may want to cover:
 -belongs_to :group
 -belongs_to :user
 
+
 ## usersテーブル
 
 |column|Type|Options|
@@ -61,8 +62,9 @@ Things you may want to cover:
 ## messagesテーブル
 
 |column|Type|Options|
+|------|----|-------|
 |body|text|null: false|
-|image|string||
+|image|string|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
