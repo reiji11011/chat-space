@@ -41,7 +41,7 @@ Things you may want to cover:
 |column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|email|string|null: false|
+|email|string|null: false, add_index unique: true|
 
 ### Association
 -has_many :members
