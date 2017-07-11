@@ -24,7 +24,7 @@ Things you may want to cover:
 * ...
 
 
-## membersテーブル
+## group_usersテーブル
 
 |column|Type|Option|
 |------|----|------|
