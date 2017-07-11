@@ -49,6 +49,7 @@ Things you may want to cover:
 
 
 ## groupsテーブル
+
 |column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
