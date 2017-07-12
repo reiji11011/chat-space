@@ -53,3 +53,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'haml-rails'
+
+group :development do #hamlへの一括変換
+  gem 'erb2haml'
+end
