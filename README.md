@@ -26,8 +26,8 @@ Things you may want to cover:
 
 ## groups_usersテーブル
 
-|column|Type|Option|
-|------|----|------|
+|Column|Type|Option|
+|:----:|:--:|:----:|
 |user|references|null: false, foreign_key: true|
 |group|references|null: false, foreign_key: true|
 
@@ -38,8 +38,8 @@ Things you may want to cover:
 
 ## usersテーブル
 
-|column|Type|Options|
-|------|----|-------|
+|Column|Type|Options|
+|:----:|:--:|:-----:|
 |name|string|null: false|
 |email|string|null: false, unique: true|
 
@@ -52,7 +52,7 @@ Things you may want to cover:
 ## groupsテーブル
 
 |column|Type|Options|
-|------|----|-------|
+|:----:|:--:|:-----:|
 |name|string|null: false|
 
 ### Association
@@ -64,7 +64,7 @@ Things you may want to cover:
 ## messagesテーブル
 
 |column|Type|Options|
-|------|----|-------|
+|:----:|:--:|:-----:|
 |text|string||
 |image|string|
 |user|references|null: false, foreign_key: true|
