@@ -45,6 +45,7 @@ Things you may want to cover:
 |email|string|null: false, unique: true|
 
 ### Association
+
 -has_many :members
 -has_many :groups, through: :members
 -has_many :messages
