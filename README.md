@@ -32,6 +32,7 @@ Things you may want to cover:
 |group|references|null: false, foreign_key: true|
 
 ### Association
+
 -belongs_to :group
 -belongs_to :user
 
@@ -56,6 +57,7 @@ Things you may want to cover:
 |name|string|null: false|
 
 ### Association
+
 -has_many :members
 -has_manny :users, through: :members
 -has_many :messages
@@ -71,5 +73,6 @@ Things you may want to cover:
 |group|references|null: false, foreign_key: true|
 
 ### Association
+
 -belongs_to :group
 -belongs_to :user
