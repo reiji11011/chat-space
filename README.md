@@ -33,8 +33,8 @@ Things you may want to cover:
 
 ### Association
 
--belongs_to :group
--belongs_to :user
+- belongs_to :group
+- belongs_to :user
 
 
 ## usersテーブル
@@ -46,9 +46,9 @@ Things you may want to cover:
 
 ### Association
 
--has_many :members
--has_many :groups, through: :members
--has_many :messages
+- has_many :members
+- has_many :groups, through: :members
+- has_many :messages
 
 
 ## groupsテーブル
@@ -59,9 +59,9 @@ Things you may want to cover:
 
 ### Association
 
--has_many :members
--has_manny :users, through: :members
--has_many :messages
+- has_many :members
+- has_manny :users, through: :members
+- has_many :messages
 
 
 ## messagesテーブル
@@ -75,5 +75,5 @@ Things you may want to cover:
 
 ### Association
 
--belongs_to :group
--belongs_to :user
+- belongs_to :group
+- belongs_to :user
