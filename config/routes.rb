@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root to: 'groups#index'
-  resouces: :groups, only: :index do
-    resouces: :messages, only: :index
+  resources :groups, only: :index do
+    resources :messages, only: :index
   end
 end
