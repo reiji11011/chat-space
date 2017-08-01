@@ -1,0 +1,42 @@
+.alert-top
+  ログインしました
+
+.app-side
+  .app-side__user
+    .app-side__user-content
+      .app-side__user-content-name
+        reiji
+      .app-side__user-content--make-group
+        %i.fa.fa-pencil-square-o
+      .app-side__user-content--edit-user
+        %i.fa.fa-cog{"aria-hidden" => "true"}
+
+  .app-side__groups
+    .app-side__groups-lists
+      .app-side__groups-lists-block
+        = render :partial => 'groups'
+
+
+.app-main
+  .app-main__header
+    .app-main__header-content
+      .app-main__header-content-group-name
+        chat-spaceを駆逐する会
+      .app-main__header-content-edit-btn
+        Edit
+    .app-main__header-member
+      MEMBER: reiji, tanaka
+
+  .app-main__body
+    .app-main__body-ls
+      = render :partial => 'messages'
+
+  .app-main__footer
+    .app-main__footer-content
+      .app-main__footer-content-type-msg
+        type a message
+        .app-main__footer-content-type-msg-icon
+          %i.fa.fa-file-image-o{"aria-hidden" => "true"}
+      .app-main__footer-content-send-btn
+        send
+
