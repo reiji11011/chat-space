@@ -1,0 +1,13 @@
+@mixin btn($color, $font-color){
+  border: solid 1px $color;
+  color: $font-color;
+  display: inline-block;
+}
+
+@mixin clearfix() {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
