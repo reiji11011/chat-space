@@ -8,13 +8,13 @@
         reiji
       %a.app-side__user-content--make-group-link{ href: "http://localhost:3000" }
         %i.fa.fa-pencil-square-o
-      %a.app-side__user-content--edit-user-link{ :href => "http://localhost:3000" }
-        %i.fa.fa-cog{"aria-hidden" => "true"}
+      %a.app-side__user-content--edit-user-link{ href: "http://localhost:3000" }
+        %i.fa.fa-cog{ aria: {hidden: "true"}}
 
   .app-side__groups
     .app-side__groups-lists
       .app-side__groups-lists-block
-        = render :partial => 'groups'
+        = render partial: 'groups'
 
 
 .app-main
@@ -29,14 +29,14 @@
 
   .app-main__body
     .app-main__body-ls
-      = render :partial => 'messages'
+      = render partial: 'messages'
 
   .app-main__footer
     .app-main__footer-content
       .app-main__footer-content-type-msg
         type a message
         %label.app-main__footer-content-type-msg-icon
-          %input{:name => "file", :style => "display:none", :type => "file"}/
-          %i.fa.fa-file-image-o{"aria-hidden" => "true"}
+          %input{ name: "file", style: "display:none", type: "file"}/
+          %i.fa.fa-file-image-o{ aria: {hidden: "true"}}
       .app-main__footer-content-send-btn
         send
