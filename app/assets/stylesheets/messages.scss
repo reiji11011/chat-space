@@ -1,4 +1,3 @@
-// 画面上部に表示するalert
 .alert-top{
   height: 24px;
   background-color:$blue;
@@ -6,12 +5,10 @@
   text-align: center;
 }
 
-// sideコンテンツ
 .app-side{
   height: 100vh;
   width: 300px;
   float: left;
-  // userコンテンツ
   &__user{
     height: 15%;
     color: #FFFFFF;
@@ -34,7 +31,6 @@
       }
     }
   }
-  // groupsコンテンツ
   &__groups{
   height: 85%;
   background-color:#2f3e51;
@@ -57,7 +53,6 @@
   }
 }
 
-// mainコンテンツ
 .app-main{
   height: 100vh;
   width: calc(100vw - 300px);
@@ -87,7 +82,6 @@
       margin: 15px 0 0 0;
     }
   }
-  // body
   &__body{
     height:calc( 100vh - 15% - 90px );
     background-color: #AAAAAA;
@@ -116,7 +110,6 @@
     }
   }
 
-  // footerコンテンツ
   &__footer{
     height: 90px;
     &-content{
