@@ -11,8 +11,8 @@
   float: left;
   &__user {
     height: 15%;
-    color: #FFFFFF;
-    background-color: #253141;
+    color: $white;
+    background-color: $deep-blue;
     &-content {
       padding: 35px 20px;
       &-name {
@@ -33,7 +33,7 @@
   }
   &__groups {
   height: 85%;
-  background-color: #2f3e51;
+  background-color: $thin-dark-blue;
     &-lists {
       padding: 0 20px;
       &-block {
@@ -64,7 +64,7 @@
     &-content {
       &-group-name {
         font-size: 20px;
-        color: #333333;
+        color: $black;
         display: inline-block;
         padding: 35px 0 0 0;
       }
@@ -77,13 +77,13 @@
     }
     &-member {
       font-size: 12px;
-      color: #999999;
+      color: $thin-black;
       margin: 15px 0 0 0;
     }
   }
   &__body {
     height: calc(100vh - 15% - 90px);
-    background-color: #AAAAAA;
+    background-color: $thin-gray;
     &-ls {
      padding: 0 40px;
      &-msg {
@@ -96,7 +96,7 @@
       }
       &-time {
         font-size: 12px;
-        color: #999999;
+        color: $thin-black;
         display: inline-block;
         margin: 0 0 0 10px;
       }
