@@ -1,13 +1,16 @@
 .alert-top {
   height: 24px;
-  background-color: $blue;
+  background-color: $thin-blue;
   color: $white;
   text-align: center;
 }
 
 .app-side {
-  height: 100vh;
-  width: 300px;
+  height: -webkit-100vh;
+  height: -moz-100vh;
+  height: -o-100vh;
+  height: -ms-100vh;
+  width: $side-bar-width;
   float: left;
   &__user {
     height: 15%;
@@ -27,7 +30,7 @@
       &--edit-user-link {
         color: $white;
         float: right;
-        padding: 0 5px 0 0;
+        padding-right: 5px;
       }
     }
   }
@@ -46,7 +49,7 @@
         &-detail {
           font-size: 11px;
           color: $white;
-          margin: 5px 0 0 0;
+          margin-top: 5px;
         }
       }
     }
@@ -54,40 +57,49 @@
 }
 
 .app-main {
-  height: 100vh;
-  width: calc(100vw - 300px);
+  height: -webkit-100vh;
+  height: -moz-100vh;
+  height: -o-100vh;
+  height: -ms-100vh;
+  width: -webkit-calc(100vw - 300px);
+  width: -moz-calc(100vw - 300px);
+  width: -o-calc(100vw - 300px);
+  width: -ms-calc(100vw - 300px);
   float: left;
   &__header {
     height: 15%;
-    border: solid 1px $gray;
+    border: slid 1px $gray;
     padding: 0 40px;
     &-content {
       &-group-name {
         font-size: 20px;
-        color: $black;
+        color: $title-black;
         display: inline-block;
-        padding: 35px 0 0 0;
+        padding-top: 35px;
       }
       &-edit-btn {
-        @include btn($blue, $blue);
+        @include btn($thin-blue, $thin-blue);
         padding: 10px 20px;
         float: right;
-        margin: 28px 0 0 0;
+        margin-top: 28px;
       }
     }
     &-member {
       font-size: 12px;
       color: $thin-black;
-      margin: 15px 0 0 0;
+      margin-top: 15px;
     }
   }
   &__body {
-    height: calc(100vh - 15% - 90px);
+    height: -webkit-calc(100vh - 15% - 90px);
+    height: -moz-calc-calc(100vh - 15% - 90px);
+    height: -o-calc(100vh - 15% - 90px);
+    height: -ms-calc(100vh - 15% - 90px);
     background-color: $thin-gray;
     &-ls {
      padding: 0 40px;
      &-msg {
-      padding: 40px 0 40px 0;
+      padding: 40px 0;
       &-name {
         font-size: 16px;
         font-weight: bold;
@@ -98,19 +110,22 @@
         font-size: 12px;
         color: $thin-black;
         display: inline-block;
-        margin: 0 0 0 10px;
+        margin-left: 10px;
       }
       &-detail {
         font-size: 14px;
         color: $font-color;
-        margin: 10px 0 0 0;
+        margin-top: 10px;
       }
      }
     }
   }
 
   &__footer {
-    height: 90px;
+    height: -webkit-90px;
+    height: -moz-90px;
+    height: -o-90px;
+    height: -ms-90px;
     &-content {
       padding: 20px 40px;
       &-type-msg {
@@ -121,17 +136,17 @@
         display: inline-block;
         &-icon {
         float: right;
-        padding: 0 10px 0 0;
+        padding-right: 10px;
       }
     }
       &-send-btn {
-        @include btn($blue, $white);
+        @include btn($thin-blue, $white);
         height: 50px;
-        background-color: $blue;
+        background-color: $thin-blue;
         width: 100px;
         text-align: center;
         line-height: 50px;
-        margin: 0 0 0 15px;
+        margin-left: 15px;
         float: right;
       }
     }
