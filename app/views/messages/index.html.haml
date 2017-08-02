@@ -6,9 +6,9 @@
     .app-side__user-content
       .app-side__user-content-name
         reiji
-      %a.app-side__user-content--make-group-link{ href: "http://localhost:3000" }
+      = link_to "http://localhost:3000", class: 'app-side__user-content--make-group-link' do
         %i.fa.fa-pencil-square-o
-      %a.app-side__user-content--edit-user-link{ href: "http://localhost:3000" }
+      = link_to "http://localhost:3000", class: 'app-side__user-content--edit-user-link' do
         %i.fa.fa-cog{ aria: {hidden: "true"}}
 
   .app-side__groups
