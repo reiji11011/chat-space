@@ -1,4 +1,4 @@
-@mixin btn($color, $font-color){
+@mixin btn($color, $font-color) {
   border: solid 1px $color;
   color: $font-color;
   display: inline-block;
