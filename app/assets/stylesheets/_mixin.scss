@@ -11,3 +11,35 @@
     clear: both;
   }
 }
+
+@mixin app-height {
+  height: 100vh;
+  height: -webkit-100vh;
+  height: -moz-100vh;
+  height: -o-100vh;
+  height: -ms-100vh;
+}
+
+@mixin app-main-width {
+  width: calc(100vw - 300px);
+  width: -webkit-calc(100vw - 300px);
+  width: -moz-calc(100vw - 300px);
+  width: -o-calc(100vw - 300px);
+  width: -ms-calc(100vw - 300px);
+}
+
+@mixin app-body-height {
+  height: calc(100vh - 15% - 90px);
+  height: -webkit-calc(100vh - 15% - 90px);
+  height: -moz-calc-calc(100vh - 15% - 90px);
+  height: -o-calc(100vh - 15% - 90px);
+  height: -ms-calc(100vh - 15% - 90px);
+}
+
+@mixin footer-height {
+  height: calc(100vh - 15% - 90px);
+  height: -webkit-calc(100vh - 15% - 90px);
+  height: -moz-calc-calc(100vh - 15% - 90px);
+  height: -o-calc(100vh - 15% - 90px);
+  height: -ms-calc(100vh - 15% - 90px);
+}

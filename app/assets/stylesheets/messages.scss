@@ -6,11 +6,7 @@
 }
 
 .app-side {
-  height: 100vh;
-  height: -webkit-100vh;
-  height: -moz-100vh;
-  height: -o-100vh;
-  height: -ms-100vh;
+  @include app-height;
   width: $side-bar-width;
   float: left;
   &__user {
@@ -58,16 +54,8 @@
 }
 
 .app-main {
-  height: 100vh;
-  height: -webkit-100vh;
-  height: -moz-100vh;
-  height: -o-100vh;
-  height: -ms-100vh;
-  width: calc(100vw - 300px);
-  width: -webkit-calc(100vw - 300px);
-  width: -moz-calc(100vw - 300px);
-  width: -o-calc(100vw - 300px);
-  width: -ms-calc(100vw - 300px);
+  @include app-height;
+  @include app-main-width;
   float: left;
   &__header {
     height: 15%;
@@ -94,11 +82,7 @@
     }
   }
   &__body {
-    height: calc(100vh - 15% - 90px);
-    height: -webkit-calc(100vh - 15% - 90px);
-    height: -moz-calc-calc(100vh - 15% - 90px);
-    height: -o-calc(100vh - 15% - 90px);
-    height: -ms-calc(100vh - 15% - 90px);
+    @include app-body-height;
     background-color: $thin-gray;
     &-ls {
       padding: 0 40px;
@@ -126,10 +110,7 @@
   }
 
   &__footer {
-    height: -webkit-90px;
-    height: -moz-90px;
-    height: -o-90px;
-    height: -ms-90px;
+    @include footer-height;
     &-content {
       padding: 20px 40px;
       &-type-msg {
