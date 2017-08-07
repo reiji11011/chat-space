@@ -1,0 +1,41 @@
+.alert-top
+  チャットグループが作成されました
+
+.app-side
+  .app-side__user
+    .app-side__user-content
+      .app-side__user-content-name
+        reiji
+      = link_to 'http://localhost:3000', class: 'app-side__user-content--make-group-link' do
+        %i.fa.fa-pencil-square-o
+      = link_to 'http://localhost:3000', class: 'app-side__user-content--edit-user-link' do
+        %i.fa.fa-cog{ aria: { hidden: 'true' } }
+
+  .app-side__groups
+    .app-side__groups-lists
+      .app-side__groups-lists-block
+        = render partial: 'groups'
+
+.app-main
+  .app-main__header
+    .app-main__header-content
+      .app-main__header-content-group-name
+        chat-spaceを駆逐する会
+      .app-main__header-content-edit-btn
+        Edit
+    .app-main__header-member
+      MEMBER: reiji, tanaka
+
+  .app-main__body
+    .app-main__body-ls
+      = render partial: 'messages'
+
+  .app-main__footer
+    .app-main__footer-content
+      .app-main__footer-content-type-msg
+        type a message
+        %label.app-main__footer-content-type-msg-icon
+          %input{ name: 'file', style: 'display:none', type: 'file' }
+          %i.fa.fa-file-image-o{ aria: { hidden: 'true' } }
+      .app-main__footer-content-send-btn
+        send

@@ -1,0 +1,41 @@
+@mixin btn($color, $font-color) {
+  border: solid 1px $color;
+  color: $font-color;
+  display: inline-block;
+}
+
+@mixin clearfix() {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin app-height {
+  height: 100vh;
+  @each $prefix in $vendor-prefix {
+    height: $prefix 100vh;
+  }
+}
+
+@mixin app-main-width {
+  width: calc(100vw - 300px);
+    @each $prefix in $vendor-prefix {
+    width: $prefix calc(100vw - 300px);
+  }
+}
+
+@mixin app-body-height {
+  height: calc(100vh - 15% - 90px);
+  @each $prefix in $vendor-prefix {
+    height: $prefix calc(100vh - 15% - 90px);
+  }
+}
+
+@mixin footer-height {
+  height: calc(100vh - 15% - 90px);
+  @each $prefix in $vendor-prefix {
+    height: $prefix calc(100vh - 15% - 90px);
+  }
+}
