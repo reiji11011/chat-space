@@ -34,8 +34,8 @@
 }
 
 @mixin footer-height {
-  height: calc(100vh - 15% - 90px);
+  height: 90px;
   @each $prefix in $vendor-prefix {
-    height: $prefix calc(100vh - 15% - 90px);
+    height: $prefix 90px;
   }
 }
