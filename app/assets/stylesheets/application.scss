@@ -5,4 +5,16 @@
 @import 'style';
 @import 'messages';
 @import 'font-awesome';
-@import 'user'
+@import 'user';
+
+.notice {
+  background-color: $thin-blue;
+  color: $white;
+  text-align: center;
+}
+
+.alert {
+  background-color: $alert-red;
+  color: $white;
+  text-align: center;
+}
