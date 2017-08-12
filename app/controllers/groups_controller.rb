@@ -10,4 +10,7 @@ class GroupsController < ApplicationController
 
   def edit
   end
+
+  def upadate
+  end
 end
