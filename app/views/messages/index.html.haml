@@ -2,7 +2,7 @@
   .app-side__user
     .app-side__user-content
       .app-side__user-content-name
-        reiji
+        = current_user.Name
       = link_to edit_user_registration_path, class: 'app-side__user-content--make-group-link' do
         %i.fa.fa-cog{ aria: { hidden: 'true' } }
       = link_to root_path, class: 'app-side__user-content--edit-user-link' do
