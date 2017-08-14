@@ -2,6 +2,8 @@ ja:
   attributes:
     password: パスワード
     group_id: グループ名
+    add_chat_group: チャットグループを追加
+    member: チャットメンバー
     user: ユーザー
   date:
     abbr_day_names:
