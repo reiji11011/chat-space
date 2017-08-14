@@ -1,7 +1,7 @@
 ja:
   attributes:
+    name: グループ名
     password: パスワード
-    group_id: グループ名
     add_chat_group: チャットメンバーを追加
     member: チャットメンバー
     user: ユーザー
