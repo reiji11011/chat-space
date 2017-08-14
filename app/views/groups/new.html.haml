@@ -12,3 +12,6 @@
       .chat-group-form__field--right
         = collection_check_boxes(:group, :user_ids, User.all, :id, :Name) do |b|
           = b.label { b.check_box + b.text }
+    .chat-group-form__field.clearfix
+      .chat-group-form__field--right
+        = f.submit 'Save', class: 'chat-group-form__action-btn'
