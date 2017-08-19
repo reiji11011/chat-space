@@ -11,11 +11,6 @@
       .chat-group-form__field--left
         = f.label :add_chat_group, class: 'chat-group-form__label'
       .chat-group-form__field--right
-        = f.text_field :name, class: 'chat-group-form__input', placeholder: '追加したいユーザー名を入力してください'
-    .chat-group-form__field.clearfix
-      .chat-group-form__field--left
-        = f.label :member, class: 'chat-group-form__label'
-      .chat-group-form__field--right
         = f.hidden_field :user_ids, value: current_user.id, multiple: true
         = f.collection_check_boxes(:user_ids, User.all, :id, :Name) do |b|
           = b.label { b.check_box + b.text }
