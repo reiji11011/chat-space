@@ -80,10 +80,9 @@
     line-height: 50px;
     font-size: 14px;
     border-bottom: 1px solid $border-gray;
-    @include clearfix();
 
     &__name {
-      float: left;
+      display: inline-block;
     }
 
     &__btn {
