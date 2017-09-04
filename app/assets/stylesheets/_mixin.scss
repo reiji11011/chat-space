@@ -47,7 +47,7 @@
   }
 }
 
-@mixin form-radius {
+@mixin form-box-sizing {
   box-sizing: border-box;
   @each $prefix in $vendor-prefix {
         box-sizing: $prefix border-box;
