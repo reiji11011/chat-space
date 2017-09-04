@@ -39,3 +39,17 @@
     height: $prefix 90px;
   }
 }
+
+@mixin form-radius {
+  border-radius: 5px;
+  @each $prefix in $vendor-prefix {
+    border-radius: $prefix 5px;
+  }
+}
+
+@mixin form-radius {
+  box-sizing: border-box;
+  @each $prefix in $vendor-prefix {
+        box-sizing: $prefix border-box;
+  }
+}
