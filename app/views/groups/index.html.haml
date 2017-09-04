@@ -5,7 +5,7 @@
         = current_user.Name
       = link_to edit_user_registration_path, class: 'app-side__user-content--make-group-icon' do
         %i.fa.fa-cog{ aria: { hidden: 'true' } }
-      = link_to root_path, class: 'app-side__user-content--edit-user-icon' do
+      = link_to new_group_path, class: 'app-side__user-content--edit-user-icon' do
         %i.fa.fa-pencil-square-o
 
   .app-side__groups
