@@ -11,4 +11,5 @@
   .app-side__groups
     .app-side__groups-lists
       .app-side__groups-lists-block
-        = render partial: 'messages/groups'
+        - @groups.each do |group|
+          = render partial: 'messages/groups', locals: { group: group}
