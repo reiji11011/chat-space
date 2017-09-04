@@ -20,7 +20,8 @@ class GroupsController < ApplicationController
     @group = Group.find(params[:id])
   end
 
-  def upadate
+  def update
+    group = Group.find(params[:id])
   end
 
   private
