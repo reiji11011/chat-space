@@ -14,7 +14,14 @@
 
   .app-main__body
     .app-main__body-ls
-      = render partial: 'messages'
+      .app-main__body-ls-msg
+        - @group.messages.each do |msg|
+          .app-main__body-ls-msg-name
+            = msg.user.Name
+          .app-main__body-ls-msg-time
+            = msg.created_at
+          .app-main__body-ls-msg-detail
+            = msg.text
 
   .app-main__footer
     .app-main__footer-content
