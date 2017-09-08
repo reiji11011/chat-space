@@ -20,4 +20,5 @@
         = f.text_field :text, placeholder: 'type a message', class: 'app-main__footer-content-type-msg'
         %label.app-main__footer-content-type-msg-icon
           = f.file_field :image, style: 'display:none'
-
+          %i.fa.fa-file-image-o{ aria: { hidden: 'true' } }
+        = f.submit 'Send', class: 'app-main__footer-content-send-btn'
