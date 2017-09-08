@@ -7,7 +7,9 @@ class MessagesController < ApplicationController
 
   def create
     @message = current_user.messages.new(message_params)
-    @message.save
+    if @message.save
+      redirect_to group_messages_path
+    end
   end
 
   private
