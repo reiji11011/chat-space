@@ -17,4 +17,4 @@
   .app-main__footer
     .app-main__footer-content
       = form_for [@group, @message], url: {:action => :create} do |f|
-
+        = f.text_field :text, placeholder: 'type a message', class: 'app-main__footer-content-type-msg'
