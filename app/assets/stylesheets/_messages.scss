@@ -105,17 +105,21 @@
 
   &__footer {
     @include footer-height;
+    &-input {
+      width: calc(100% - 170px);
+      display: inline-block;
+      border: 1px solid $border-gray;
+      padding: 13px 0 13px 13px;
+    }
     &-content {
       padding: 20px 40px;
       &-type-msg {
-        @include btn($gray, $font-color);
-        width: calc(100% - 130px);
-        font-size: 16px;
-        padding: 15px 0 15px 10px;
-        display: inline-block;
+        width: 90%;
+        outline: 0;
+        border: 0px;
+        background: transparent;
         &-icon {
-          float: right;
-          padding-right: 10px;
+          margin-left: 50px;
         }
       }
       &-send-btn {
