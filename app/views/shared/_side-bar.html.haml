@@ -10,6 +10,13 @@
 
   .app-side__groups
     .app-side__groups-lists
-      .app-side__groups-lists-block
-        - @groups.each do |group|
-          = render partial: 'groups/groups', locals: { group: group}
+      - @groups.each do |group|
+        .app-side__groups-lists-block
+        = link_to group_messages_path(group) do
+          .app-side__groups-lists-block-name
+            = group.name
+          .app-side__groups-lists-block-detail
+            - if group.messages.last
+              = group.messages.last.text
+            - else
+              メッセージがありません
