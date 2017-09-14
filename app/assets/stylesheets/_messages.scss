@@ -50,25 +50,25 @@
   @include app-height;
   @include app-main-width;
   float: left;
-  &__header {
+  &-header {
     height: 15%;
     border: slid 1px $gray;
     padding: 0 40px;
-    &-content {
-      &-group-name {
+    &__content {
+      &__group-name {
         font-size: 20px;
         color: $title-black;
         display: inline-block;
         padding-top: 35px;
       }
-      &-edit-btn {
+      &__edit-btn {
         @include btn($thin-blue, $thin-blue);
         padding: 10px 20px;
         float: right;
         margin-top: 28px;
       }
     }
-    &-member {
+    &__member {
       font-size: 12px;
       color: $thin-black;
       margin-top: 15px;
