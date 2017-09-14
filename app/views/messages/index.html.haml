@@ -29,6 +29,6 @@
         .app-main-footer__input
           = f.text_field :text, placeholder: 'type a message', class: 'app-main-footer__input--type-msg'
           %label.app-main-footer__input--icon
-            = f.file_field :image, style: 'display:none'
+            = f.file_field :image, class: 'app-main-footer__input--img'
             %i.fa.fa-file-image-o{ aria: { hidden: 'true' } }
         = f.submit 'Send', class: 'app-main-footer__content__send-btn'
