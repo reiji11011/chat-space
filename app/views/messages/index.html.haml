@@ -12,15 +12,15 @@
       - @group.users.each do |u|
         = u.Name
 
-  .app-main__body
-    .app-main__body-ls
-      .app-main__body-ls-msg
+  .app-main-body
+    .app-main-body__ls
+      .app-main-body__msg
         - @group.messages.each do |msg|
-          .app-main__body-ls-msg-name
+          .app-main-body__msg__name
             = msg.user.Name
-          .app-main__body-ls-msg-time
+          .app-main-body__msg__time
             = msg.created_at
-          .app-main__body-ls-msg-detail
+          .app-main-body__msg__detail
             = msg.text
 
   .app-main-footer
