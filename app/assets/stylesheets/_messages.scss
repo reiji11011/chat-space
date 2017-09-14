@@ -103,26 +103,11 @@
     }
   }
 
-  &__footer {
+  &-footer {
     @include footer-height;
-    &-input {
-      width: calc(100% - 170px);
-      display: inline-block;
-      border: 1px solid $border-gray;
-      padding: 13px 0 13px 13px;
-    }
-    &-content {
+    &__content {
       padding: 20px 40px;
-      &-type-msg {
-        width: 90%;
-        outline: 0;
-        border: 0px;
-        background: transparent;
-        &-icon {
-          margin-left: 50px;
-        }
-      }
-      &-send-btn {
+      &__send-btn {
         @include btn($thin-blue, $white);
         height: 50px;
         background-color: $thin-blue;
@@ -131,6 +116,21 @@
         line-height: 50px;
         margin-left: 15px;
         float: right;
+      }
+    }
+    &__input {
+      width: calc(100% - 170px);
+      display: inline-block;
+      border: 1px solid $border-gray;
+      padding: 13px 0 13px 13px;
+      &--type-msg {
+        width: 90%;
+        outline: 0;
+        border: 0px;
+        background: transparent;
+      }
+      &--icon {
+        margin-left: 50px;
       }
     }
   }

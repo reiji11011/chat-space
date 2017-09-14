@@ -23,12 +23,12 @@
           .app-main__body-ls-msg-detail
             = msg.text
 
-  .app-main__footer
-    .app-main__footer-content
+  .app-main-footer
+    .app-main-footer__content
       = form_for [@groups, @message], url: { action: :create } do |f|
-        .app-main__footer-input
-          = f.text_field :text, placeholder: 'type a message', class: 'app-main__footer-content-type-msg'
-          %label.app-main__footer-content-type-msg-icon
+        .app-main-footer__input
+          = f.text_field :text, placeholder: 'type a message', class: 'app-main-footer__input--type-msg'
+          %label.app-main-footer__input--icon
             = f.file_field :image, style: 'display:none'
             %i.fa.fa-file-image-o{ aria: { hidden: 'true' } }
-        = f.submit 'Send', class: 'app-main__footer-content-send-btn'
+        = f.submit 'Send', class: 'app-main-footer__content__send-btn'
