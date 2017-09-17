@@ -10,7 +10,7 @@ class MessagesController < ApplicationController
     if @message.save
       redirect_to group_messages_path
     else
-      redirect_to group_messages_path, alert: 'メッセージを入力してください'
+      render action: :index
     end
   end
 
