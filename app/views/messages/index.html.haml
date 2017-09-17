@@ -15,13 +15,7 @@
   .app-main-body
     .app-main-body__ls
       .app-main-body__msg
-        - @group.messages.each do |msg|
-          .app-main-body__msg__name
-            = msg.user.Name
-          .app-main-body__msg__time
-            = msg.created_at
-          .app-main-body__msg__detail
-            = msg.text
+        = render partial: 'messages/message', locals: { group: @group }
 
   .app-main-footer
     .app-main-footer__content
