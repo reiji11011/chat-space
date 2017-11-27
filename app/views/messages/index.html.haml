@@ -1,12 +1,11 @@
 = render 'shared/side-bar'
-
 .app-main
   .app-main-header
     .app-main-header__content
       .app-main-header__content__group-name
         = @group.name
       .app-main-header__content__edit-btn
-        Edit
+        = link_to 'Edit', edit_group_path(@group)
     .app-main-header__member
       MEMBER:
       - @group.users.each do |u|
