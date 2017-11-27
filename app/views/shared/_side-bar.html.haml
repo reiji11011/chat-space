@@ -1,0 +1,22 @@
+.app-side
+  .app-side__user
+    .app-side__user-content
+      .app-side__user-content-name
+        = current_user.Name
+      = link_to edit_user_registration_path, class: 'app-side__user-content--make-group-icon' do
+        %i.fa.fa-cog{ aria: { hidden: 'true' } }
+      = link_to new_group_path, class: 'app-side__user-content--edit-user-icon' do
+        %i.fa.fa-pencil-square-o
+
+  .app-side__groups
+    .app-side__groups-lists
+      - @groups.each do |group|
+        .app-side__groups-lists-block
+        = link_to group_messages_path(group) do
+          .app-side__groups-lists-block-name
+            = group.name
+          .app-side__groups-lists-block-detail
+            - if group.messages.last
+              = group.messages.last.text
+            - else
+              メッセージがありません

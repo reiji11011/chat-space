@@ -1,0 +1,7 @@
+- group.messages.each do |msg|
+  .app-main-body__msg__name
+    = msg.user.Name
+  .app-main-body__msg__time
+    = msg.created_at
+  .app-main-body__msg__detail
+    = msg.text

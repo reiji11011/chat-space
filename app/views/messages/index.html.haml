@@ -1,38 +1,28 @@
-.app-side
-  .app-side__user
-    .app-side__user-content
-      .app-side__user-content-name
-        = current_user.Name
-      = link_to edit_user_registration_path, class: 'app-side__user-content--make-group-icon' do
-        %i.fa.fa-cog{ aria: { hidden: 'true' } }
-      = link_to root_path, class: 'app-side__user-content--edit-user-icon' do
-        %i.fa.fa-pencil-square-o
-
-  .app-side__groups
-    .app-side__groups-lists
-      .app-side__groups-lists-block
-        = render partial: 'groups'
+= render 'shared/side-bar'
 
 .app-main
-  .app-main__header
-    .app-main__header-content
-      .app-main__header-content-group-name
-        chat-spaceを駆逐する会
-      .app-main__header-content-edit-btn
+  .app-main-header
+    .app-main-header__content
+      .app-main-header__content__group-name
+        = @group.name
+      .app-main-header__content__edit-btn
         Edit
-    .app-main__header-member
-      MEMBER: reiji, tanaka
+    .app-main-header__member
+      MEMBER:
+      - @group.users.each do |u|
+        = u.Name
 
-  .app-main__body
-    .app-main__body-ls
-      = render partial: 'messages'
+  .app-main-body
+    .app-main-body__ls
+      .app-main-body__msg
+        = render partial: 'messages/message', locals: { group: @group }
 
-  .app-main__footer
-    .app-main__footer-content
-      .app-main__footer-content-type-msg
-        type a message
-        %label.app-main__footer-content-type-msg-icon
-          %input{ name: 'file', style: 'display:none', type: 'file' }
-          %i.fa.fa-file-image-o{ aria: { hidden: 'true' } }
-      .app-main__footer-content-send-btn
-        send
+  .app-main-footer
+    .app-main-footer__content
+      = form_for [@groups, @message], url: { action: :create } do |f|
+        .app-main-footer__input
+          = f.text_field :text, placeholder: 'type a message', class: 'app-main-footer__input--type-msg'
+          %label.app-main-footer__input--icon
+            = f.file_field :image, class: 'app-main-footer__input--img'
+            %i.fa.fa-file-image-o{ aria: { hidden: 'true' } }
+        = f.submit 'Send', class: 'app-main-footer__content__send-btn'

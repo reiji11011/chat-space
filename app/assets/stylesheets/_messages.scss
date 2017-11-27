@@ -50,74 +50,64 @@
   @include app-height;
   @include app-main-width;
   float: left;
-  &__header {
+  &-header {
     height: 15%;
     border: slid 1px $gray;
     padding: 0 40px;
-    &-content {
-      &-group-name {
+    &__content {
+      &__group-name {
         font-size: 20px;
         color: $title-black;
         display: inline-block;
         padding-top: 35px;
       }
-      &-edit-btn {
+      &__edit-btn {
         @include btn($thin-blue, $thin-blue);
         padding: 10px 20px;
         float: right;
         margin-top: 28px;
       }
     }
-    &-member {
+    &__member {
       font-size: 12px;
       color: $thin-black;
       margin-top: 15px;
     }
   }
-  &__body {
+  &-body {
     @include app-body-height;
     background-color: $thin-gray;
-    &-ls {
+    overflow: scroll;
+    &__ls {
       padding: 0 40px;
-      &-msg {
-        padding: 40px 0;
-        &-name {
-          font-size: 16px;
-          font-weight: bold;
-          color: $font-color;
-          display: inline-block;
-        }
-        &-time {
-          font-size: 12px;
-          color: $thin-black;
-          display: inline-block;
-          margin-left: 10px;
-        }
-        &-detail {
-          font-size: 14px;
-          color: $font-color;
-          margin-top: 10px;
-        }
+    }
+    &__msg {
+      padding: 40px 0;
+      &__name {
+        font-size: 16px;
+        font-weight: bold;
+        color: $font-color;
+        display: inline-block;
+      }
+      &__time {
+        font-size: 12px;
+        color: $thin-black;
+        display: inline-block;
+        margin-left: 10px;
+      }
+      &__detail {
+        font-size: 14px;
+        color: $font-color;
+        margin-top: 10px;
       }
     }
   }
 
-  &__footer {
+  &-footer {
     @include footer-height;
-    &-content {
+    &__content {
       padding: 20px 40px;
-      &-type-msg {
-        @include btn($gray, $font-color);
-        width: calc(100% - 130px);
-        font-size: 16px;
-        padding: 15px 0 15px 10px;
-        display: inline-block;
-        &-icon {
-          float: right;
-          padding-right: 10px;
-        }
-      }
-      &-send-btn {
+      &__send-btn {
         @include btn($thin-blue, $white);
         height: 50px;
         background-color: $thin-blue;
@@ -126,6 +116,24 @@
         line-height: 50px;
         margin-left: 15px;
         float: right;
+      }
+    }
+    &__input {
+      width: calc(100% - 170px);
+      display: inline-block;
+      border: 1px solid $border-gray;
+      padding: 13px 0 13px 13px;
+      &--type-msg {
+        width: 90%;
+        outline: 0;
+        border: 0px;
+        background: transparent;
+      }
+      &--icon {
+        margin-left: 50px;
+      }
+      &--img {
+        display: none;
       }
     }
   }
