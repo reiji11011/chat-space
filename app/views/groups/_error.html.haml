@@ -1,9 +1,9 @@
-- if @group.errors.any?
+- if group.errors.any?
   .chat-group-form__errors
     %p
-      = @group.errors.count
+      = group.errors.count
       件のエラーが発生しました
     %ul
-    - @group.errors.full_messages.each do |msg|
+    - group.errors.full_messages.each do |msg|
       %li
         = msg
